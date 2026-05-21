@@ -1,0 +1,9 @@
+.next/
+node_modules/
+out/
+.env*
+.vercel
+
+# OS / editor cruft
+desktop.ini
+.DS_Store
