@@ -191,7 +191,7 @@ function PhoneMockup() {
           <div className="mt-3 space-y-2">
             <div className="max-w-[88%] rounded-2xl rounded-tl-sm bg-white px-3 py-2 shadow-sm">
               <p className="font-jakarta text-[10.5px] leading-snug text-ds-text">
-                Hi! Following up on the 3-bed you saved on Zillow — are you still
+                Hi! Following up on the 3-bed you saved on Zillow. Are you still
                 hoping to tour soon?
               </p>
             </div>
@@ -200,12 +200,12 @@ function PhoneMockup() {
               style={{ background: 'linear-gradient(135deg, #C9A227, #8C6F1E)' }}
             >
               <p className="font-jakarta text-[10.5px] leading-snug">
-                Yeah — this weekend would be ideal.
+                Yeah, this weekend would be ideal.
               </p>
             </div>
             <div className="max-w-[88%] rounded-2xl rounded-tl-sm bg-white px-3 py-2 shadow-sm">
               <p className="font-jakarta text-[10.5px] leading-snug text-ds-text">
-                Perfect. I have Saturday 11 AM open with your agent — locking
+                Perfect. I have Saturday 11 AM open with your agent, locking
                 it in now.
               </p>
             </div>
@@ -247,7 +247,7 @@ export default function Hero() {
     <section
       id="top"
       ref={sectionRef}
-      className="relative flex min-h-screen items-center overflow-hidden bg-ds-bg pt-28 lg:pt-24"
+      className="relative flex min-h-screen items-center overflow-hidden bg-ds-bg pt-20 lg:pt-16"
     >
       {/* particle field */}
       <div className="absolute inset-0 z-0">
@@ -283,23 +283,13 @@ export default function Hero() {
           <div className="grid items-center gap-12 lg:grid-cols-2 xl:gap-16">
             {/* ── Copy ── */}
             <motion.div style={{ y: copyY }}>
-              <motion.div
-                initial={{ opacity: 0, filter: 'blur(10px)', y: 14 }}
-                animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-                transition={{ duration: 0.7, ease: EASE, delay: 0.15 }}
-                className="sub-title mb-6"
-              >
-                <span className="sub-title-dot" />
-                AI Voice Agent · For Real Estate Agents
-              </motion.div>
-
               <h1
                 className="mb-6 font-jakarta text-[2.7rem] font-extrabold text-ds-heading sm:text-6xl xl:text-[4.4rem]"
                 style={{ lineHeight: '1.04', letterSpacing: '-0.045em' }}
               >
                 <SplitText text="20 qualified appointments" mode="char" />{' '}
                 <SplitText
-                  text="in the next 30 days —"
+                  text="in the next 30 days"
                   mode="word"
                   delay={0.5}
                 />{' '}
@@ -321,8 +311,8 @@ export default function Hero() {
                 style={{ letterSpacing: '-0.02em', lineHeight: '1.6' }}
               >
                 An AI voice agent that calls every new lead in under{' '}
-                <strong className="font-bold text-ds-heading">60 seconds</strong>{' '}
-                — and reactivates the{' '}
+                <strong className="font-bold text-ds-heading">60 seconds</strong>,{' '}
+                and reactivates the{' '}
                 <strong className="font-bold text-ds-heading">
                   500+ dead leads
                 </strong>{' '}

@@ -13,7 +13,7 @@ const dmSans = DM_Sans({
 });
 
 const TITLE =
-  '20 Real Estate Appointments in 30 Days | AI Voice Agent — DataStaq AI';
+  '20 Real Estate Appointments in 30 Days | AI Voice Agent by DataStaq AI';
 const DESCRIPTION =
   'An AI voice agent for real estate agents that responds to new leads in under 60 seconds and reactivates the dead leads in your CRM. 20 qualified appointments in 30 days, or you don\'t pay.';
 
@@ -37,7 +37,7 @@ export const metadata = {
     title: TITLE,
     description: DESCRIPTION,
     // TODO: add /public/og-image.png (1200x630) before launch
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'DataStaq AI — AI Voice Agent for Real Estate' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'DataStaq AI: AI Voice Agent for Real Estate' }],
   },
   twitter: {
     card: 'summary_large_image',

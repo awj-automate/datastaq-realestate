@@ -2,8 +2,8 @@
 
 /*
   ── RESULTS DATA — verify before launch ──────────────────────────
-   Luke & Jonathan figures come straight from the brief. Priya &
-   Marcus are illustrative placeholders in the same format.
+   Luke & Jonathan figures come straight from the brief. Marcus is
+   an illustrative placeholder in the same format.
    [TODO: replace placeholders / confirm all figures + add real
     headshots in /public/results if desired.]
   ─────────────────────────────────────────────────────────────────
@@ -20,7 +20,6 @@ import { Calendar, Check } from '@/components/Icons';
 const RESULTS = [
   { name: 'Luke', total: 23, inbound: 8, database: 15, window: '30 days', note: 'First full month live' },
   { name: 'Jonathan', total: 12, inbound: 7, database: 5, window: '14 days', note: 'First two weeks' },
-  { name: 'Priya', total: 19, inbound: 11, database: 8, window: '30 days', note: 'Solo agent, suburban' },
   { name: 'Marcus', total: 27, inbound: 9, database: 18, window: '30 days', note: 'Team of 3, big database' },
 ];
 
@@ -65,36 +64,46 @@ function Confetti() {
   );
 }
 
-/* ── Climbing trajectory chart ─────────────────────────────── */
+/* ── Climbing trajectory chart (full-width) ────────────────── */
 function TrajectoryChart() {
-  const W = 320;
-  const H = 170;
+  const W = 760;
+  const H = 258;
+  const padX = 50;
+  const padTop = 44;
+  const padBottom = 48;
   const max = 26;
+  const innerW = W - padX * 2;
+  const innerH = H - padTop - padBottom;
+  const baseY = padTop + innerH;
   const pts = RAMP.map((p, i) => ({
-    x: 24 + (i / (RAMP.length - 1)) * (W - 44),
-    y: H - 28 - (p.v / max) * (H - 54),
+    x: padX + (i / (RAMP.length - 1)) * innerW,
+    y: padTop + innerH - (p.v / max) * innerH,
     ...p,
   }));
   const line = pts.map((p) => `${p.x},${p.y}`).join(' ');
-  const area = `${line} ${pts[pts.length - 1].x},${H - 28} ${pts[0].x},${H - 28}`;
+  const area = `${line} ${pts[pts.length - 1].x},${baseY} ${pts[0].x},${baseY}`;
+  const grid = [0, 1, 2, 3].map((g) => padTop + (g / 3) * innerH);
 
   return (
-    <div className="card h-full p-6">
-      <h3 className="mb-1 font-jakarta text-base font-extrabold text-ds-heading" style={{ letterSpacing: '-0.03em' }}>
+    <div className="card p-6 sm:p-8">
+      <h3
+        className="mb-1 font-jakarta text-lg font-extrabold text-ds-heading"
+        style={{ letterSpacing: '-0.03em' }}
+      >
         The 30-day ramp
       </h3>
-      <p className="mb-3 font-jakarta text-xs text-ds-subtle">
-        Cumulative qualified appointments — representative client
+      <p className="mb-4 font-jakarta text-sm text-ds-subtle">
+        Cumulative qualified appointments, representative client
       </p>
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full" fill="none">
         <defs>
           <linearGradient id="rampFill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#C9A227" stopOpacity="0.28" />
+            <stop offset="0%" stopColor="#C9A227" stopOpacity="0.3" />
             <stop offset="100%" stopColor="#C9A227" stopOpacity="0" />
           </linearGradient>
         </defs>
-        {[0, 1, 2, 3].map((g) => (
-          <line key={g} x1="24" y1={28 + g * 30} x2={W - 20} y2={28 + g * 30} stroke="rgba(0,0,0,0.05)" strokeWidth="1" />
+        {grid.map((y, i) => (
+          <line key={i} x1={padX} y1={y} x2={W - padX} y2={y} stroke="rgba(0,0,0,0.05)" strokeWidth="1" />
         ))}
         <motion.polygon
           points={area}
@@ -107,7 +116,7 @@ function TrajectoryChart() {
         <motion.polyline
           points={line}
           stroke="#C9A227"
-          strokeWidth="3"
+          strokeWidth="3.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           initial={{ pathLength: 0 }}
@@ -124,70 +133,16 @@ function TrajectoryChart() {
             transition={{ delay: 0.5 + i * 0.22, type: 'spring', stiffness: 280, damping: 15 }}
             style={{ transformOrigin: `${p.x}px ${p.y}px` }}
           >
-            <circle cx={p.x} cy={p.y} r="4.5" fill="#fff" stroke="#C9A227" strokeWidth="2.6" />
-            <text x={p.x} y={p.y - 11} textAnchor="middle" fontSize="10" fontWeight="700" fill="#3F3F46" className="font-jakarta">
+            <circle cx={p.x} cy={p.y} r="6" fill="#fff" stroke="#C9A227" strokeWidth="3.4" />
+            <text x={p.x} y={p.y - 16} textAnchor="middle" fontSize="15" fontWeight="700" fill="#3F3F46" className="font-jakarta">
               {p.v}
             </text>
-            <text x={p.x} y={H - 10} textAnchor="middle" fontSize="8.5" fill="#A1A1AA" className="font-jakarta">
+            <text x={p.x} y={H - 14} textAnchor="middle" fontSize="13" fill="#A1A1AA" className="font-jakarta">
               {p.d}
             </text>
           </motion.g>
         ))}
       </svg>
-    </div>
-  );
-}
-
-/* ── Inbound vs database split bars ────────────────────────── */
-function SplitBars() {
-  return (
-    <div className="card h-full p-6">
-      <h3 className="mb-1 font-jakarta text-base font-extrabold text-ds-heading" style={{ letterSpacing: '-0.03em' }}>
-        Where the appointments came from
-      </h3>
-      <p className="mb-4 font-jakarta text-xs text-ds-subtle">
-        Inbound speed-to-lead vs. database reactivation, by client
-      </p>
-      <div className="space-y-4">
-        {RESULTS.map((r, idx) => (
-          <div key={r.name}>
-            <div className="mb-1 flex items-center justify-between">
-              <span className="font-jakarta text-xs font-bold text-ds-heading">{r.name}</span>
-              <span className="font-jakarta text-xs font-semibold text-ds-subtle">{r.total} total</span>
-            </div>
-            <div className="flex h-5 overflow-hidden rounded-full bg-black/[0.04]">
-              <motion.div
-                className="flex items-center justify-end pr-2"
-                style={{ background: 'linear-gradient(90deg, #E5C463, #C9A227)' }}
-                initial={{ width: 0 }}
-                whileInView={{ width: `${(r.inbound / r.total) * 100}%` }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.2 + idx * 0.12, ease: [0.16, 1, 0.3, 1] }}
-              >
-                <span className="font-jakarta text-[9px] font-bold text-white">{r.inbound}</span>
-              </motion.div>
-              <motion.div
-                className="flex items-center justify-start pl-2"
-                style={{ background: 'linear-gradient(90deg, #8B6CF0, #6D4FD6)' }}
-                initial={{ width: 0 }}
-                whileInView={{ width: `${(r.database / r.total) * 100}%` }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.35 + idx * 0.12, ease: [0.16, 1, 0.3, 1] }}
-              >
-                <span className="font-jakarta text-[9px] font-bold text-white">{r.database}</span>
-              </motion.div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="mt-4 flex items-center gap-5 border-t border-black/[0.06] pt-3">
-        <span className="flex items-center gap-1.5 font-jakarta text-[11px] font-semibold text-ds-muted">
-          <span className="h-2.5 w-2.5 rounded-sm bg-[#C9A227]" /> Inbound
-        </span>
-        <span className="flex items-center gap-1.5 font-jakarta text-[11px] font-semibold text-ds-muted">
-          <span className="h-2.5 w-2.5 rounded-sm bg-[#8B6CF0]" /> Database
-        </span>
-      </div>
     </div>
   );
 }
@@ -219,7 +174,7 @@ export default function Results() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            className="mb-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+            className="mb-8 grid gap-6 sm:grid-cols-3"
           >
             {RESULTS.map((r) => (
               <motion.div key={r.name} variants={fadeUp}>
@@ -257,20 +212,15 @@ export default function Results() {
             ))}
           </motion.div>
 
-          {/* charts */}
-          <div className="grid gap-6 lg:grid-cols-2">
-            <Reveal variants={{ hidden: { opacity: 0, x: -40 }, show: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } } }}>
-              <TrajectoryChart />
-            </Reveal>
-            <Reveal variants={{ hidden: { opacity: 0, x: 40 }, show: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } } }}>
-              <SplitBars />
-            </Reveal>
-          </div>
+          {/* trajectory chart */}
+          <Reveal variants={fadeUp}>
+            <TrajectoryChart />
+          </Reveal>
 
           <Reveal className="mt-10 text-center">
             <p className="font-jakarta text-sm text-ds-subtle">
               Figures from early partners. Your results depend on lead volume,
-              database size, and market — see the guarantee below.
+              database size, and market. See the guarantee below.
             </p>
           </Reveal>
         </div>

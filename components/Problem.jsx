@@ -178,7 +178,7 @@ export default function Problem() {
                 className="mx-auto mt-5 max-w-2xl font-jakarta text-lg text-ds-muted"
                 style={{ letterSpacing: '-0.02em' }}
               >
-                Every agent has two leaks running at once — and both of them are
+                Every agent has two leaks running at once, and both of them are
                 paid for, measurable, and completely fixable.
               </p>
             </Reveal>
@@ -210,7 +210,7 @@ export default function Problem() {
               >
                 A Zillow lead goes cold in minutes. While you&apos;re on a
                 showing, three other agents are dialing the same person. The
-                first to call usually wins — and it&apos;s rarely you.
+                first to call usually wins, and it&apos;s rarely you.
               </p>
               <DecayChart />
               <div className="mt-6 flex items-center gap-4 rounded-2xl border border-[#EF4444]/15 bg-[#EF4444]/[0.05] p-4">
@@ -223,7 +223,7 @@ export default function Problem() {
                 <p className="font-jakarta text-[13px] font-medium text-ds-muted">
                   better conversion when a lead is called within{' '}
                   <strong className="text-ds-heading">1 minute</strong> vs. 30.
-                  Speed isn&apos;t an edge — it&apos;s the whole game.
+                  Speed isn&apos;t an edge. It&apos;s the whole game.
                 </p>
               </div>
             </Reveal>
@@ -250,7 +250,7 @@ export default function Problem() {
                 className="mb-6 font-jakarta text-[15px] text-ds-muted"
                 style={{ letterSpacing: '-0.02em', lineHeight: '1.6' }}
               >
-                Hundreds of leads you already paid for — sitting untouched for
+                Hundreds of leads you already paid for, sitting untouched for
                 months. Some of those people are ready to buy or sell right now.
                 You just never called them back.
               </p>
@@ -265,7 +265,7 @@ export default function Problem() {
                 <p className="font-jakarta text-[13px] font-medium text-ds-muted">
                   already spent acquiring the{' '}
                   <strong className="text-ds-heading">500+ leads</strong> now
-                  collecting dust — money sitting on the table, not lost yet.
+                  collecting dust. Money sitting on the table, not lost yet.
                 </p>
               </div>
             </Reveal>
@@ -278,7 +278,7 @@ export default function Problem() {
               style={{ letterSpacing: '-0.03em' }}
             >
               One AI voice agent plugs{' '}
-              <span className="gradient-text">both leaks</span> — at the same
+              <span className="gradient-text">both leaks</span>, at the same
               time.
             </p>
           </Reveal>

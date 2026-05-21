@@ -100,7 +100,7 @@ function BookingCard() {
         </span>
       </MagneticButton>
       <p className="mt-3 text-center font-jakarta text-[11px] text-white/40">
-        No pressure, no hard sell — we&apos;ll tell you honestly if it&apos;s a fit.
+        No pressure, no hard sell. We&apos;ll tell you honestly if it&apos;s a fit.
       </p>
     </div>
   );
@@ -188,7 +188,7 @@ export default function FinalCTA() {
                   style={{ letterSpacing: '-0.02em', lineHeight: '1.6' }}
                 >
                   An AI voice agent answering new leads in 60 seconds and
-                  reviving your dead database — running in parallel, every day.
+                  reviving your dead database, running in parallel, every day.
                   Hit 20 qualified appointments in 30 days, or you don&apos;t pay.
                 </p>
               </Reveal>

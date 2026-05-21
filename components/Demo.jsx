@@ -15,13 +15,13 @@ const CONVOS = {
     age: 'lead age: 38 seconds',
     icon: House,
     lines: [
-      { from: 'ai', text: "Hi Jordan, this is Morgan with the Carter Group — I saw you just asked about 412 Lakeview Drive. Is now an okay time?" },
-      { from: 'lead', text: 'Oh — wow, that was fast. Yeah, sure.' },
+      { from: 'ai', text: "Hi Jordan, this is Morgan with the Carter Group. I saw you just asked about 412 Lakeview Drive. Is now an okay time?" },
+      { from: 'lead', text: 'Oh, wow, that was fast. Yeah, sure.' },
       { from: 'ai', text: "Love it. Are you hoping to buy in the next few months, or just starting to look around?" },
       { from: 'lead', text: "Next couple of months, ideally. We're already pre-approved." },
-      { from: 'ai', text: "Perfect. The listing agent has Saturday at 11 or 1 open for a private tour — which works better?" },
+      { from: 'ai', text: "Perfect. The listing agent has Saturday at 11 or 1 open for a private tour. Which works better?" },
       { from: 'lead', text: 'Saturday at 11 is great.' },
-      { from: 'ai', text: "Done — you're booked for Saturday at 11. A text confirmation is on its way. Talk soon!" },
+      { from: 'ai', text: "Done, you're booked for Saturday at 11. A text confirmation is on its way. Talk soon!" },
     ],
   },
   reactivation: {
@@ -31,13 +31,13 @@ const CONVOS = {
     age: 'lead age: 14 months',
     icon: Cabinet,
     lines: [
-      { from: 'ai', text: "Hi Dana, it's Morgan following up from the Carter Group — you reached out about homes in Maple Heights a while back. Still on your radar?" },
+      { from: 'ai', text: "Hi Dana, it's Morgan following up from the Carter Group. You reached out about homes in Maple Heights a while back. Still on your radar?" },
       { from: 'lead', text: "Honestly that was over a year ago... but funny enough, we've been thinking about selling our place." },
       { from: 'ai', text: "That's great to hear. Are you thinking of listing soon, or still feeling it out?" },
       { from: 'lead', text: 'Probably this spring. Prices around here seem solid right now.' },
       { from: 'ai', text: "They are. Would a quick 20-minute valuation with one of our listing agents be useful?" },
-      { from: 'lead', text: "Yeah — that would actually be really helpful." },
-      { from: 'ai', text: "Great. I've got Thursday at 5:30 — booking it now and sending a confirmation. Appreciate you, Dana!" },
+      { from: 'lead', text: "Yeah, that would actually be really helpful." },
+      { from: 'ai', text: "Great. I've got Thursday at 5:30, booking it now and sending a confirmation. Appreciate you, Dana!" },
     ],
   },
 };
@@ -363,7 +363,7 @@ export default function Demo() {
             <Phone size={15} className="text-ds-primary-light" />
             <span className="font-jakarta text-sm text-white/55">
               On any call with real intent, the AI can warm-transfer straight to
-              you — live.
+              you, live.
             </span>
           </Reveal>
         </div>

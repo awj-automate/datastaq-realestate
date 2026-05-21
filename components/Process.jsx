@@ -14,7 +14,7 @@ const STEPS = [
     accent: '#C9A227',
     title: 'We map your stack',
     dur: 'Week 1',
-    body: 'A working session — not a 40-field intake form. We see exactly where leads enter, where they leak, and what is already sitting in your database.',
+    body: 'A working session, not a 40-field intake form. We see exactly where leads enter, where they leak, and what is already sitting in your database.',
     points: [
       'Map your CRM, Zillow, ads, referrals & website',
       'Audit your database size and current lead flow',
@@ -247,7 +247,7 @@ export default function Process() {
   const accent = STEPS[active].accent;
 
   return (
-    <section id="process" className="relative overflow-hidden bg-white py-20 lg:py-28">
+    <section id="process" className="relative bg-white py-20 lg:py-28">
       <div className="relative z-10 mx-auto max-w-content px-5 sm:px-8 lg:px-12">
         <div className="content-wrap">
           <div className="mb-14 text-center lg:mb-20">

@@ -46,11 +46,11 @@ const jsonLd = {
     {
       '@type': 'Service',
       name: 'AI Voice Agent for Real Estate Agents',
-      serviceType: 'AI voice agent — speed-to-lead and CRM database reactivation',
+      serviceType: 'AI voice agent for speed-to-lead and CRM database reactivation',
       provider: { '@id': `${SITE_URL}/#organization` },
       areaServed: 'US',
       description:
-        'An AI voice agent installed inside a real estate agent\'s existing stack that responds to new inbound leads in under 60 seconds and systematically reactivates an existing database of 500+ leads — qualifying buyers and sellers and booking appointments directly to calendar.',
+        'An AI voice agent installed inside a real estate agent\'s existing stack that responds to new inbound leads in under 60 seconds and systematically reactivates an existing database of 500+ leads, qualifying buyers and sellers and booking appointments directly to calendar.',
       audience: {
         '@type': 'BusinessAudience',
         name: 'US real estate agents and teams with 30+ new inbound leads per month and a database of 500+ existing leads',

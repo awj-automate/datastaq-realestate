@@ -112,7 +112,7 @@ function Seal() {
           appointments
         </div>
         <div className="mt-0.5 font-jakarta text-[11px] font-semibold text-white/55">
-          in 30 days — or $0
+          in 30 days, or $0
         </div>
       </div>
     </div>
@@ -152,7 +152,7 @@ export default function Guarantee() {
                 >
                   No retainer trap, no vague deliverables. We commit to 20
                   qualified appointments on your calendar in the first 30 days.
-                  Miss it, and you don&apos;t pay. It&apos;s that simple — because
+                  Miss it, and you don&apos;t pay. It&apos;s that simple, because
                   we only win when you do.
                 </p>
               </Reveal>

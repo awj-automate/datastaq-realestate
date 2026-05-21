@@ -321,9 +321,9 @@ export default function Solution() {
                 className="mx-auto mt-5 max-w-2xl font-jakarta text-lg text-ds-muted"
                 style={{ letterSpacing: '-0.02em' }}
               >
-                The AI voice agent installs inside the stack you already run — no
-                rip-and-replace — and works both leaks in parallel, every hour
-                of every day.
+                The AI voice agent installs inside the stack you already run,
+                with no rip-and-replace, and works both leaks in parallel,
+                every hour of every day.
               </p>
             </Reveal>
           </div>
@@ -343,7 +343,7 @@ export default function Solution() {
                   className="font-jakarta text-xl font-extrabold text-ds-heading"
                   style={{ letterSpacing: '-0.03em' }}
                 >
-                  Stream A — Inbound
+                  Stream A · Inbound
                 </h3>
               </div>
               <p
@@ -351,7 +351,7 @@ export default function Solution() {
                 style={{ letterSpacing: '-0.02em', lineHeight: '1.6' }}
               >
                 The instant a new lead hits your CRM or inbox, the AI is dialing
-                — in under 60 seconds, 24/7. It qualifies on timeline, financing
+                in under 60 seconds, 24/7. It qualifies on timeline, financing
                 and motivation, then books the showing or warm-transfers a hot
                 buyer straight to you.
               </p>
@@ -368,7 +368,7 @@ export default function Solution() {
                   className="font-jakarta text-xl font-extrabold text-ds-heading"
                   style={{ letterSpacing: '-0.03em' }}
                 >
-                  Stream B — Reactivation
+                  Stream B · Reactivation
                 </h3>
               </div>
               <p
@@ -377,7 +377,7 @@ export default function Solution() {
               >
                 In parallel, the AI works methodically through your 500+ aged
                 leads with contextual, non-spammy openers that reference where
-                each lead came from — surfacing the sellers and buyers quietly
+                each lead came from, surfacing the sellers and buyers quietly
                 ready to move right now.
               </p>
             </Reveal>

@@ -80,7 +80,7 @@ export default function Footer() {
                 className="font-jakarta text-sm text-ds-muted"
                 style={{ letterSpacing: '-0.02em', lineHeight: '1.6' }}
               >
-                AI voice agents for real estate teams — instant speed-to-lead
+                AI voice agents for real estate teams: instant speed-to-lead
                 and database reactivation, installed in the stack you already
                 run.
               </p>

@@ -237,7 +237,7 @@ export default function ROICalculator() {
 
           <Reveal className="mt-6 text-center">
             <p className="font-jakarta text-xs text-ds-subtle">
-              Estimates based on conservative conversion assumptions — not a
+              Estimates based on conservative conversion assumptions, not a
               guarantee of results. The 30-day appointment guarantee terms are
               below.
             </p>
