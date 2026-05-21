@@ -322,8 +322,7 @@ export default function Solution() {
                 style={{ letterSpacing: '-0.02em' }}
               >
                 The AI voice agent installs inside the stack you already run,
-                with no rip-and-replace, and works both leaks in parallel,
-                every hour of every day.
+                and works both leaks in parallel, 24/7.
               </p>
             </Reveal>
           </div>

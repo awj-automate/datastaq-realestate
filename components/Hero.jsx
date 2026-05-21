@@ -316,7 +316,7 @@ export default function Hero() {
                 <strong className="font-bold text-ds-heading">
                   500+ dead leads
                 </strong>{' '}
-                rotting in your CRM. Two streams, one calendar, zero new hires.
+                rotting in your CRM.
               </motion.p>
 
               {/* stat chips */}

@@ -13,7 +13,6 @@
   ═══════════════════════════════════════════════════════════════════════
 */
 
-import CustomCursor from '@/components/CustomCursor';
 import ScrollProgress from '@/components/ScrollProgress';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -77,7 +76,6 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <CustomCursor />
       <ScrollProgress />
       <Navbar />
       <main>
